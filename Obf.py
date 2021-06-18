@@ -30,5 +30,6 @@ finished_obf_string = filler.join(letters_list)
 
 os.system('clear||cls')
 print('\nCopy the code below for your project:\n')
+
 print("//Made by: github.com/Spoowy63")
 print(f"NSString *{variable_name}; \n{variable_name} = [@\"{finished_obf_string}\" stringByReplacingOccurrencesOfString:@\"{filler}\" withString:@\"\"];")
