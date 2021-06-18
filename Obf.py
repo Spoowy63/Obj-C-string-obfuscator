@@ -2,43 +2,33 @@ import string
 import random
 import os
 
+# Made by: github.com/Spoowy63
 
-    # input text has to be atleast 2 letters long
-a = input('Paste the text you want encrypted: ')
-b = input('String length (leave empty for default value): ')
+string_to_obf = input('Paste the text you want encrypted: ')
+filler_length = input('Filler length (leave empty for default value): ')
 
-    # if you dont want symbols for example, change the 4th True to False
+variable_name = "A" + str(random.randint(1000, 9999))
 
-upper, lower, digit, symbol = True, True, True, False
-
-    # this will consist of all the options you enabled
-
-mix = ''
-
-    # this will check if its true or not and if its true it will add it to mix variable
-
-if upper:
-    mix += string.ascii_uppercase
-if lower:
-    mix += string.ascii_lowercase
-if digit:
-    mix += string.digits
-if symbol:
-    mix += string.punctuation
-
-    # this will be the variable for NSString
-numb = str(random.randint(1000, 9999))
-number = 'A' + numb
-
-    # checking if input is empty or not, if empty use default value
-if b == '':
-    b = 18
+if filler_length == "":
+	filler_length = 18
 else:
-    b = int(b)
+	filler_length = int(filler_length)
 
-ec = ''.join(random.choices(mix, k=b))
-ecs = ec.join(a)
-os.system("clear")
+
+letters_list = []
+
+for characters in string_to_obf:
+	letters_list.append(characters)
+
+
+combined_characters = string.ascii_uppercase + string.ascii_lowercase + string.digits
+
+filler = "".join(random.choices(combined_characters, k=filler_length))
+
+finished_obf_string = filler.join(letters_list)
+
+
+os.system('clear||cls')
 print('\nCopy the code below for your project:\n')
-print('//Made By Spoowy63')
-print(f"NSString *{number}; \n{number} = [@\"{ecs}\" stringByReplacingOccurrencesOfString:@\"{ec}\" withString:@\"\"];")
+print("//Made by: github.com/Spoowy63")
+print(f"NSString *{variable_name}; \n{variable_name} = [@\"{finished_obf_string}\" stringByReplacingOccurrencesOfString:@\"{filler}\" withString:@\"\"];")
