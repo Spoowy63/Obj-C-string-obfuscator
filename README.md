@@ -1,4 +1,9 @@
+### TAP THE LINK TO BE INSTANTLY ABLE TO USE IT NO NEED TO DOWNLOAD SCRIPT
+* https://www.online-python.com/i9cMbRwGhk
+
+
 ### HOW TO USE:
+* Video below is a bit outdated
 * [TAP ME TO WATCH THE VIDEO](https://streamable.com/osykch)
 
 ### EXTRA INFO:
